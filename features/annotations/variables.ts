@@ -22,3 +22,9 @@ let point: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
+
+// Function
+const logNumber: (i: number) => void = (i: number) => {
+  // annotation is everything between the : and before the =
+  console.log(i); // everything after the = is the actual arrow function.
+};
