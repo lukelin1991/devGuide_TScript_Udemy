@@ -1,24 +1,25 @@
 class Vehicle {
-  drive(): void {
-    console.log("chugga chugga");
-  }
+  constructor(public color: string) {}
 
-  honk(): void {
+  protected honk(): void {
     console.log("beep");
   }
 }
 
-class Car extends Vehicle {
-  // child class, inherits Vehicle through "extends"
-  drive(): void {
-    console.log("vroom");
-  }
-}
+const vehicle = new Vehicle("orange");
+console.log(vehicle.color);
 
-const car = new Car();
-car.honk();
-car.drive();
+// class Car extends Vehicle {
+//   // child class, inherits Vehicle through "extends"
+//   private drive(): void {
+//     console.log("vroom");
+//   }
 
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+//   startDrivingProcess(): void {
+//     this.drive();
+//     this.honk();
+//   }
+// }
+
+// const car = new Car();
+// car.startDrivingProcess();
